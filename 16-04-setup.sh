@@ -21,14 +21,12 @@ sudo apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev 
 wget https://github.com/yas195/BOK/raw/master/bokcoind.tar.gz
 tar xvzf bokcoind.tar.gz.1
 rm bokcoind.tar.gz.1
-chmod 755 bokcoind
+mkdir .bokcoin
 sleep 1
 echo '*** 완료 1/3 ***'
 sleep 1
 echo '*** 진행중 2/3 ***'
-echo '*** 복코인드 시작 및 종료, 설정 ***'
-sleep 2
-./bokcoind -daemon
+echo '*** 복코인드 설정 ***'
 sleep 3
 echo -n "사용하고자 하는 rpc 패스워드를 입력해 주세요 입력후 [ENTER]: "
 read usrpas
@@ -36,16 +34,14 @@ echo -n "당신이 생성한 masternode genkey 값을 입력해 주세요 입력
 read mngenkey
 echo -n "이 컴퓨터의 IP:46996 입력 (예: 123.456.789.111:46996) 입력후 [ENTER]: "
 read ipaddress
-
 echo -e "rpcuser=bokuser \nrpcpassword=$usrpas \nrpcallowip=127.0.0.1 \nlisten=1 \nserver=1 \ndaemon=1 \nstaking=0 \nmasternodeaddr=$ipaddress \nmasternode=1 \nmasternodeprivkey=$mngenkey \n" > ~/.bokcoin/bokcoin.conf
 sleep 2
-./bokcoind -stop
+./bokcoind -daemon
 echo '*** 완료 2/3 ***'
 sleep 3
 echo '*** 단계 3/3 ***'
 echo '*** 복코인드 시작 및 지갑 싱크 시작 ***'
 echo '1분후 getinfo 정보가 출력될 것입니다...'
-./bokcoind -daemon
 sleep 60
 ./bokcoind getinfo
 sleep 2
