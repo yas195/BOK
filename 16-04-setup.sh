@@ -21,11 +21,11 @@ sudo apt-get -y update
 sudo apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev libcrypto++-dev libqrencode-dev libminiupnpc-dev libgmp-dev autoconf autogen automake libtool libgmp3-dev
 wget https://github.com/yas195/BOK/raw/master/bokcoind.tar.gz
 tar xvzf bokcoind.tar.gz.1
-rm bokcoind.tar.gz.1     'rm은 삭제 일단여기까지고'
+rm bokcoind.tar.gz.1
 chmod 755 bokcoind
-mkdir Bokcoin  '폴더만듬'
-mv bokcoind Bokcoin/bokcoind     '복코인드를 복코인드폴더로 이동.'
-cd Bokcoin '폴더로이동'
+mkdir Bokcoin
+mv bokcoind Bokcoin/bokcoind
+cd Bokcoin
 sleep 1
 echo '*** Done 1/3 ***'
 sleep 1
