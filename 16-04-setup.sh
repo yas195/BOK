@@ -22,9 +22,6 @@ wget https://github.com/yas195/BOK/raw/master/bokcoind.tar.gz
 tar xvzf bokcoind.tar.gz.1
 rm bokcoind.tar.gz.1
 chmod 755 bokcoind
-mkdir bokcoin
-mv bokcoind bokcoin/bokcoind
-cd bokcoin
 sleep 1
 echo '*** 완료 1/3 ***'
 sleep 1
