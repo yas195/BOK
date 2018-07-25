@@ -29,9 +29,11 @@ sleep 1
 echo '*** 완료 1/3 ***'
 sleep 1
 echo '*** 진행중 2/3 ***'
-echo '*** 복코인드 시작 및, 설정 ***'
+echo '*** 복코인드 시작 및 종료, 설정 ***'
 sleep 2
 ./bokcoind -daemon
+sleep 2
+./bokcoind -stop
 sleep 3
 echo -n "사용하고자 하는 rpc 패스워드를 입력해 주세요 입력후 [ENTER]: "
 read usrpas
