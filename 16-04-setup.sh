@@ -19,8 +19,8 @@ sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get -y update
 sudo apt-get -y install build-essential libssl-dev libdb++-dev libboost-all-dev libcrypto++-dev libqrencode-dev libminiupnpc-dev libgmp-dev autoconf autogen automake libtool libgmp3-dev libdb4.8-dev libdb4.8++-dev
 wget https://github.com/yas195/BOK/raw/master/bokcoind.tar.gz
-tar xvzf bokcoind.tar.gz.1
-rm bokcoind.tar.gz.1
+tar xvzf bokcoind.tar.gz
+rm bokcoind.tar.gz
 mkdir .bokcoin
 sleep 1
 echo '*** 완료 1/3 ***'
